@@ -5,13 +5,13 @@ __author__ = "730654167"
 
 def main_planner(guests: int) -> None:
     """Details for planning a tea party"""
-    print("A Cozy Tea Party for " + str(guests) + " People !")
+    print("A Cozy Tea Party for " + str(guests) + " People ")
     print("Tea Bags: " + str(tea_bags(guests)))
     print("Treats: " + str(treats(guests)))
     print("Cost: $" + str(cost(tea_bags(guests), treats(guests))))
 
     # Taking the number of guests and using each individual function to make a
-    # string and print on TH
+    # string and print on Trailhead
     # Have to make the integers strings for them to print
 
 
