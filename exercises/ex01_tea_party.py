@@ -11,7 +11,7 @@ def main_planner(guests: int) -> None:
     print("Cost: $" + str(cost(tea_bags(guests), treats(guests))))
 
     # Taking the number of guests and using each individual function to make a
-    # string and print on TH
+    # string and print on Trailhead
     # Have to make the integers strings for them to print
 
 
