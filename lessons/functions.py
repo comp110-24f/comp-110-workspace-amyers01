@@ -7,7 +7,7 @@ print(randint(3, 17))
 
 # Function Definition
 def sum(num1: int, num2: int) -> int:
-    """Return the sum of num1 and num2."""
+    """Return the sumof num1 and num2."""
     # Adding the colon int tells that its an integer, without this it would error.
     # Have to put the colon after the return type, otherwise = error.
     return num1 + num2
