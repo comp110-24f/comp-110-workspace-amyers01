@@ -9,7 +9,7 @@ def mimic(message: str) -> str:
 
 
 def main() -> None:
-    """Prints the message"""
+    """Prints the messag"""
     print(mimic(message=input("What is your message?")))
 
 
