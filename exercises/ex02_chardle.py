@@ -63,7 +63,9 @@ def contains_char(word: str, letter: str) -> None:
 
 
 def main() -> None:
-    contains_char(word=input_word(), letter=input_letter())
+    word = input_word()
+    letter = input_letter()
+    contains_char(word, letter)
 
 
 if __name__ == "__main__":
