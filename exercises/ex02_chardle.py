@@ -17,6 +17,7 @@ def input_word() -> str:
 
 
 def input_letter() -> str:
+    """Display letter instructions"""
     letter: str = input("Enter a single character: ")
     if len(letter) == 1:
         return letter
@@ -29,26 +30,25 @@ def input_letter() -> str:
 
 
 def contains_char(word: str, letter: str) -> None:
-    input("Searching for " + letter + " in " + word)
+    print("Searching for " + letter + " in " + word)
+    count = 0
     index: int = 0
-    count: int = 0
     while index < len(word):
         if word[index] == letter:
+            count += 1
             print(letter + " found at index " + str(index))
-            count = count + 1
-        index = index + 1
-
+        index += 1
     if count > 1:
-        print(str(count) + " instances of " + letter + " in " + word)
+        print(str(count) + " instances of " + letter + " found in " + word)
     elif count == 1:
-        print(str(count) + " instance of " + letter + " in " + word)
+        print("1 instance of " + letter + " found in " + word)
     else:
-        print("No instances of " + letter + " in " + word)
+        print("No instances of " + letter + " found in " + word)
 
 
 # Use a while loop to determine if word and letter match
-# have to create a new variable index to get each index of the word
-# add in the count and print statement IF the letter and index match
+# have to create a new variable, index, to get each index of the word
+# add in the count and print statement IF the letter and index match, use +=
 # change index no matter what = after the if statement
 
 
