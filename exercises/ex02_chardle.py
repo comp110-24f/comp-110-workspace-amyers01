@@ -56,5 +56,8 @@ def main() -> None:
     contains_char(word=input_word(), letter=input_letter())
 
 
+# call contains_char function, with the parameters word & letter = to functions
+
+
 if __name__ == "__main__":
     main()
