@@ -30,6 +30,7 @@ def input_letter() -> str:
 
 
 def contains_char(word: str, letter: str) -> None:
+    """Checks if letter and index match"""
     print("Searching for " + letter + " in " + word)
     count = 0
     index: int = 0
@@ -49,14 +50,14 @@ def contains_char(word: str, letter: str) -> None:
 # Use a while loop to determine if word and letter match
 # have to create a new variable, index, to get each index of the word
 # add in the count and print statement IF the letter and index match, use +=
-# change index no matter what = after the if statement
+# change index no matter if letter and index don't match - after the if statement
 
 
 def main() -> None:
     contains_char(word=input_word(), letter=input_letter())
 
 
-# call contains_char function, with the parameters word & letter = to functions
+# call contains_char function, with the parameters word & letter equal to to functions
 
 
 if __name__ == "__main__":
