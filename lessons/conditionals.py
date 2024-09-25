@@ -26,7 +26,7 @@ def should_i_eat(hungry: bool) -> None:
     print("I'm proud of you <3")  # etiher way, be kind to yourself
 
 
-# should_i_eat(hungry=True)
+should_i_eat(hungry=True)
 
 
 def check_first_letter(word: str, letter: str) -> str:
