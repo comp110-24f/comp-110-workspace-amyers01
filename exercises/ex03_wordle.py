@@ -5,12 +5,13 @@ __author__ = "730654167"
 
 def input_guess(secret_word_len: int) -> str:
     """Returns the word guessed of the correct length"""
-    while True:
-        guess: str = input(f"Enter a {secret_word_len} character word: ")
-        if len(guess) == secret_word_len:
-            return guess
-        else:
-            print(f"That wasn't {secret_word_len} chars! Try again: ")
+    guess: str = input(f"Enter a {secret_word_len} character word: ")
+    while len(guess) != secret_word_len:
+        # if len(guess) == secret_word_len:
+        # return guess
+        # else:
+        guess = input(f"That wasn't {secret_word_len} chars! Try again: ")
+    return guess
 
 
 def contains_char(secret: str, letter: str) -> bool:
@@ -59,24 +60,26 @@ def main(secret: str) -> None:
     """The entrypoint of the program and main game loop."""
     secret_word_len: int = len(secret)
     turn: int = 1
-    while turn <= 6:
+    won: bool = False
+    while turn <= 6 and not won:
         print(f"=== Turn {turn}/6 ===")
-        guess: str = input(f"Enter a {secret_word_len} character word: ")
+        guess = input_guess(secret_word_len)
         print(emojified(guess, secret))
         if guess == secret:
             print(f"You won in {turn}/6 turns!")
-            exit()
+            won = True
         else:
             turn += 1
-    print("X/6 - Sorry, try again tomorrow!")
+            print(emojified(guess, secret))
 
+        if turn > 6:
+            print("X/6 - Sorry, try again tomorrow!")
 
-main(secret="codes")
-
-# Have to define secret_word_len as a local variable
-# Add local variable turns for while loop condition
-# add local variable guess under the turn number
-# calls emojified function with guess and secret
+    # Have to define secret_word_len as a local variable
+    # call input_guess and set secret_word_len as parameter
+    # Add local variable turns for while loop condition
+    # add local variable guess under the turn number
+    # calls emojified function with guess and secret
 
 
 if __name__ == "__main__":
