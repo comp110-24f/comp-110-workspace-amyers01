@@ -14,9 +14,6 @@ def all(input: list[int], num: int) -> bool:
     return True
 
 
-print(all([2, 2, 2], 1))
-
-
 # enter a list and a number
 # goes through each index of list to see if matches the number
 # if they match then keep iterating through the list and returns True
