@@ -4,8 +4,10 @@ __author__ = "730654167"
 
 
 def all(input: list[int], num: int) -> bool:
-    """Returns True if the number and all values in list match"""
+    """Returns True is the number and all values in list match"""
     idx: int = 0
+    if len(input) == 0:
+        return False
     while idx < len(input):
         if input[idx] == num:
             idx += 1
@@ -16,8 +18,8 @@ def all(input: list[int], num: int) -> bool:
 
 # enter a list and a number
 # goes through each index of list to see if matches the number
-# if they match then keep iterating through the list and returns True
-# if they don't match, then it ends function and returns False
+# if matches, goes through each element and returns True
+# if no match, returns False and ends the function
 
 
 def max(input: list[int]) -> int:
