@@ -39,7 +39,7 @@ def add_at_index(input: list[int], elem: int, idx: int) -> None:
     input.append(elem)
     for insert in range(len(input) - 1, idx, -1):
         input[insert] = input[insert - 1]
-    input[idx] = elem
+    input[idx] = elem + 1
 
 
 # if the index argument is less than 0 or greater than the length = error
