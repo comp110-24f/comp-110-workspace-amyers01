@@ -1,4 +1,4 @@
-"""Exercise 05 - Implementing list utility functions"""
+"""Exercise 5 - Implementing list utility functions"""
 
 __author__ = "730654167"
 
