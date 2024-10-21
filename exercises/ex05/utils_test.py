@@ -1,4 +1,4 @@
-"""Exercise 05 - defining unit tests for utility functions"""
+"""Exercise 5 - defining unit tests for utility functions"""
 
 __author__ = "730654167"
 
