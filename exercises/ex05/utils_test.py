@@ -3,6 +3,7 @@
 __author__ = "730654167"
 
 from exercises.ex05.utils import only_evens, sub, add_at_index
+import pytest
 
 
 def test_return_only_evens() -> None:
@@ -65,9 +66,6 @@ def test_process_add_idx() -> None:
     index: int = 1
     add_at_index(a, num, index)
     assert a == [7, 8, 9, 10, 15]
-
-
-import pytest
 
 
 def test_edge_add_idx() -> None:
