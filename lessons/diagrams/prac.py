@@ -20,7 +20,7 @@ def num_instances(inp_str: str, search_str: str):
     print(count)
 
 
-num_instances("Livelive", "ve")
+# num_instances("Livelive", "ve")
 
 
 def prac(machine: str) -> str:
@@ -29,7 +29,7 @@ def prac(machine: str) -> str:
     return machine
 
 
-print(prac(machine="test"))
+# print(prac(machine="test"))
 
 
 def chars(msg: str) -> str:
@@ -41,6 +41,18 @@ def chars(msg: str) -> str:
     return copy
 
 
-a: str = "Hey"
-b: str = "Hi"
-chars(msg=a)
+# a: str = "Hey"
+# b: str = "Hi"
+# chars(msg=a)
+
+
+def reverse_multiply(a: list[int]) -> list[int]:
+    idx: int = len(a) - 1
+    values: list[int] = []
+    while idx >= 0:
+        values.append(a[idx] * 2)
+        idx -= 1
+    return values
+
+
+print(reverse_multiply([2, 4, 6, 8]))
