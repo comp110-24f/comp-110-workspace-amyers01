@@ -29,17 +29,17 @@ def favorite_color(d: dict[str, str]) -> str:
         else:
             count[color] += 1
     max_num: int = 0
-
     for color in count:
         if count[color] > max_num:
             max_num = count[color]
             popular_color = color
         elif count[color] == max_num and popular_color != color:
             return popular_color
-        return popular_color
+
+    return popular_color
 
 
-print(favorite_color({"a": "green", "b": "blue"}))
+print(favorite_color({"a": "green", "b": "blue", "c": "blue"}))
 
 
 # WORK ON FAVORITE COLORS
