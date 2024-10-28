@@ -7,7 +7,7 @@ def invert(d: dict[str, str]) -> dict[str, str]:
     """Creates a dictionary inverting the keys and value of input dictionary"""
     d_invert: dict[str, str] = {}
     for key in d:
-        if key in d_invert:
+        if d[key] in d_invert:
             raise KeyError("There are dupliicate keys in d_invert!")
         d_invert[d[key]] = key
     return d_invert
