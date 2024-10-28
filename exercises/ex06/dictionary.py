@@ -7,16 +7,15 @@ def invert(d: dict[str, str]) -> dict[str, str]:
     """Creates a dictionary inverting the keys and value of input dictionary"""
     d_invert: dict[str, str] = {}
     for key in d:
-        new_key: str = d[key]
-        new_value: str = key
-        d_invert[new_key] = new_value
-        if new_key in d_invert:
+        if key in d_invert:
             raise KeyError("There are dupliicate keys in d_invert!")
+        d_invert[d[key]] = key
     return d_invert
 
 
-# takes the key of the input dict and places it as the value of inverted dict.
-# takes the value of input dict and places it as the value of inverted dict.
+# loops through the keys in inputed dict
+# calls the key of input dict and takes the value as the key of new dict
+# takes the key called and makes it the value of the new dict
 
 
 def favorite_color(d: dict[str, str]) -> str:
@@ -35,14 +34,18 @@ def favorite_color(d: dict[str, str]) -> str:
             popular_color = color
         elif count[color] == max_num and popular_color != color:
             return popular_color
-
     return popular_color
 
 
-print(favorite_color({"a": "green", "b": "blue", "c": "blue"}))
-
-
-# WORK ON FAVORITE COLORS
+# creates a new dictionary (count) and new string for most popular color
+# loops through the names in the input dictionary
+# creates a new variable color for each value (color) in the input dict
+# if the color is already in the count dict, it adds one to the value (count)
+# if the color is not in count dict, it assigns the value to 1
+# creates a new variable (max_num) for the max number of a color
+# loops through the count dict keys and if the value is greater than max_num = max_num
+# the corresponding color is the popular_color
+# if there is a tie, two colors have the same value and are max, returns first in dict
 
 
 def count(d: list[str]) -> dict[str, int]:
