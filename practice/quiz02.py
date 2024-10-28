@@ -45,4 +45,31 @@ def max_sum_dict(d: dict[str, list[int]]) -> str:
         return keys[1]
 
 
-print(max_sum_dict(d={"a": [1, 2, 3], "b": [4, 5]}))
+# print(max_sum_dict(d={"a": [1, 2, 3], "b": [4, 5]}))
+
+
+def f(x: list[str]) -> str:
+    print(len(x))
+    for y in range(0, len(x)):
+        x[y] += "x"
+    return x[y]
+
+
+def g(x: list[str]) -> list[str]:
+    new_list: list[str] = []
+    for z in x:
+        new_list.append(str(z))
+    return new_list
+
+
+record: list[str] = ["x", "y"]
+# print(f(record))
+# print(g(record))
+
+x: list[float] = [1.0, 2.0]
+y: list[float] = [3.0, 4.0]
+y = x
+x[0] = 3.0
+
+print(x)
+print(y)

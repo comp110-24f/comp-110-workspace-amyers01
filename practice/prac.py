@@ -55,4 +55,4 @@ def reverse_multiply(a: list[int]) -> list[int]:
     return values
 
 
-print(reverse_multiply([2, 4, 6, 8]))
+# print(reverse_multiply([2, 4, 6, 8]))
